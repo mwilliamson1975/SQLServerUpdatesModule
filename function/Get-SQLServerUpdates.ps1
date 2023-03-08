@@ -65,7 +65,8 @@ function Get-SqlServerUpdate
             'SQL Server 2014',
             'SQL Server 2016',
             'SQL Server 2017',
-            'SQL Server 2019')]
+            'SQL Server 2019',
+            'SQL Server 2022')]
         [string]$Version,
         [switch]$Force,
         [switch]$Offline
@@ -143,6 +144,7 @@ function Get-SqlServerUpdate
         'SQL Server 2016'    = 5
         'SQL Server 2017'    = 4
         'SQL Server 2019'    = 3
+        'SQL Server 2022'    = 3
     }
 
     $VersionSQL = [ordered]@{
@@ -153,6 +155,7 @@ function Get-SqlServerUpdate
         'SQL Server 2016'    = ($content.Links | Where-Object Href -Match "sql-server-2016-updates")[0]
         'SQL Server 2017'    = ($content.Links | Where-Object Href -Match "sql-server-2017-updates")[0]
         'SQL Server 2019'    = ($content.Links | Where-Object Href -Match "sql-server-2019-updates")[0]
+        'SQL Server 2022'    = ($content.Links | Where-Object Href -Match "sql-server-2022-updates")[0]
     }
     Write-Verbose ("{0};Links" -f $ElapsedTime.Elapsed)
 

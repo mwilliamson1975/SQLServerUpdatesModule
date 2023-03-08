@@ -26,6 +26,7 @@
           1.1.0.4 - Added properties to SqlServerUpdates.Instance object
           1.1.5.4 - Added cache file with list of updates
           1.1.5.5 - Added support for Sql Server 2019
+          1.1.5.6 - Added support for Sql Server 2022
 #>
 
 @{
@@ -34,7 +35,7 @@
     RootModule             = 'SQLServerUpdatesModule.psm1'
 
     # Version number of this module.
-    ModuleVersion          = '1.1.5.5'
+    ModuleVersion          = '1.1.5.6'
 
     # ID used to uniquely identify this module
     GUID                   = '9fde4b8f-637b-4a3a-ac62-5235c875dc30'
@@ -136,7 +137,7 @@
             LicenseUri   = ""
 
             # Release notes for this particular version of the module
-            ReleaseNotes = "Added support for Sql Server 2019"
+            ReleaseNotes = "Added support for Sql Server 2022"
 
             # If true, the LicenseUrl points to an end-user license (not just a source license) which requires the user agreement before use.
             # RequireLicenseAcceptance = ""
