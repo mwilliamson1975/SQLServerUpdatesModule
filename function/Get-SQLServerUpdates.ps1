@@ -206,7 +206,11 @@ function Get-SqlServerUpdate
                 SupportEnds      = ''
             }
 
-            $update.Name = ($VersionSQL.$SQL.Text).Replace(" Updates", "")
+            if ($VersionSQL.$SQL.Text -ieq 'Other SQL 2022 Updates') {
+                $update.Name = 'SQL Server 2022'
+            } else {
+                $update.Name = ($VersionSQL.$SQL.Text).Replace(" Updates", "")
+            }
 
             if ($ColumnSetting.$SQL -eq 5)
             {
