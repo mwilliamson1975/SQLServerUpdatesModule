@@ -79,7 +79,7 @@ function Get-SqlServerUpdate
     $parser = New-Object AngleSharp.Html.Parser.HtmlParser
     $WebsiteAddress = 'http://sqlserverupdates.com/'
 
-    if ((-not (Test-Connection -ComputerName 8.8.8.8 -Count 1 -Quiet)) -and (Test-Path $CachedData))
+    if ((-not (Test-Connection -ComputerName $WebsiteAddress -Count 1 -Quiet)) -and (Test-Path $CachedData))
     {
         $ReturnCachedData = $true
     }
